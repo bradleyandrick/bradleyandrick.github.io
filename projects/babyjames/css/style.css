@@ -1,0 +1,146 @@
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+
+}
+#map{
+    padding: 0;
+    margin: 0; 
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+.leaflet-popup-content p {
+    margin: 0.2em 0;
+}
+
+/*Style for teh sequence control*/
+
+.sequence-control-container {
+    width: 280px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+}
+
+.range-slider {
+    width: 180px;
+}
+#forward {
+    float: right;
+}
+
+#reverse {
+    float: left;
+}
+.skip{
+    padding: 0px;
+}
+
+/*Style for the lengend*/
+
+#Legend{
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 18px;
+}
+.legend-control-container{
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    text-align: center;
+    border: solid gray 1px;
+    font-size: 15px;
+}
+
+#LegendTitle{
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*Style for the state info*/
+
+.ViewStateInfo{
+     width: 250px;
+    height: 155px;
+    background-color: rgba(255,255,255,0.8);
+    border: solid gray 1px;
+}
+#stateSelect{
+    padding: 0px;
+    width: 100%;
+}
+#topFiveTitle{
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #303030;
+}
+#stateList{
+    margin-top: 5px;
+    padding-left: 20px;
+    width: 90px;
+}
+
+#jRankDiv{
+    position: relative;
+    top:-90px;
+    left: 100px;
+    font-size: 20px;
+}
+#jRankData{
+    padding-left: 40px;
+}
+
+/* Style for the title div*/
+
+#MapTitle{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 600px;
+    height: 170px;
+    background-color: rgba(255,255,255,0.7);
+    border: solid gray 1px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    
+}
+#MainTitle{
+    font-size: 40px;
+    padding-top: 10px;
+    margin: 0px;
+    padding-left: 10px; 
+}
+#titleLine1{
+    font-size: 16px;
+    padding-left: 10px;
+}
+#sourceInfo{
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 0px;
+    margin: 0px;
+}
+#youtubeLink{
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 0px;
+    margin: 0px;
+    color: #000;
+}

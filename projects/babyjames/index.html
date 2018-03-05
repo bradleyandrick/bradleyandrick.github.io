@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Baby James Map</title>
+
+		<!--external stylesheet links here-->
+        <link rel="icon" type="image/png" href="img/babyImage16.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="lib/leaflet_marker_cluster/MarkerCluster.css">
+        <link rel="stylesheet" href="lib/leaflet_marker_cluster/MarkerCluster.Default.css">
+		<link rel="stylesheet" href="css/style.css">
+        
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+	</head>
+
+	<body>
+        <!--Title Content-->
+        <div id="MapTitle">
+            <p id="MainTitle">Where Is Sweet Baby James?</p>
+            <p id="titleLine1">What has been the most given baby name for the last 100 years? James!<br><br>Use this map to explore the most popular baby name through time.</p>
+            <p id="sourceInfo">Data Source: <a href="https://www.ssa.gov/cgi-bin/namesbystate.cgi" target="_blank">https://www.ssa.gov/cgi-bin/namesbystate.cgi</a> | Gathered and Organized, Feb. 2018</p>
+            <p id="youtubeLink"><a href="https://www.youtube.com/watch?v=XXVg07t1HCE" target="_blank">Get Inspired</a></p>
+        </div>
+        <!--Map Content-->
+        <div id="map"></div>
+
+		<!--external script links here-->
+        <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
+        <script type="application/javascript" src="lib/leaflet_marker_cluster/leaflet.markercluster-src.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
