@@ -40,7 +40,7 @@
         height = 460;
         
         // set the height and width of the info div
-        document.getElementById("info").style.width = window.innerWidth * 0.48 + "px";
+        document.getElementById("info").style.width = window.innerWidth * 0.485 + "px";
         document.getElementById("info").style.height = window.innerHeight - 490 + "px";
 
         //create new svg container for the map
