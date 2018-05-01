@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Asheville Greenways</title>
+
+		<!--external stylesheet links here-->
+        <link rel="stylesheet" href="css/leaflet.css"/>
+        <link rel="stylesheet" href="css/sideDrawer.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+	</head>
+
+	<body>
+        <!--drawer layout-->
+        <div id="mySidenav" class="sidenav">
+          <div  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</div>
+            <div id="navInfoText"></div>
+            <div id="drawerContents">
+                <input type="text" id="myInput" onkeyup="searchFilter()" placeholder="Type to filter list..">
+                <div id="greenwayList"></div>
+            </div>
+        </div>
+        
+        <span id="openSide" style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <!-- map, title, and info-->
+        <div id="mapContainer">
+            <div id="legend"><div id="dashLine"></div><div id="solidLine"></div><div id="legendText">Proposed&nbsp;&nbsp;&nbsp;Completed</div></div>
+            <div id="instructionsDiv"></div>
+            <div id="titleContainer" ><div id="mapTitle">Asheville <a id="greenwayText">Greenway</a> Explorer</div></div>
+            <div id="map"></div>
+            <div id="infoDiv">
+                <div id="startInfo"><h2>Instructions:</h2><p>This is a simple map tool to view greenway information in Asheville, NC and it's metro area.<br><br> Use the side bar to select a greenway to begin exploring! <a href="https://www.google.com" target="_blank">More info</a></p></div>
+            </div>
+        </div>
+        
+		<!--external script links here-->
+        <script type="text/javascript" src="data/buncombeOutline.geojson"></script>
+        <script type="text/javascript" src="lib/leaflet.js"></script>
+        <script type="text/javascript" src="lib/leafletGeomUtil.js"></script>
+        <script type="text/javascript" src="js/leaflet.almostover.js"></script>
+        <script type="text/javascript" src="lib/jquery_3_3_1_min.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
