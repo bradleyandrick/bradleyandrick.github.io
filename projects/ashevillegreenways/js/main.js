@@ -20,7 +20,7 @@ function createMap(){
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     });
     
-    imagery.setOpacity(0.5)
+    imagery.setOpacity(0.5);
     
     // create map element layer restictions based on zoom for basemaps
     map.on('zoomend', function() {
@@ -83,7 +83,10 @@ function setSideNavWidth(){
 
 // open github info page on title click
 $("#titleContainer").click(function () {
-   window.open("https://www.google.com", '_blank');
+    var northEast = L.latLng(35.852301, -83.063367),
+    southWest = L.latLng(35.305013, -81.912549);
+    var originalBounds = L.latLngBounds(southWest, northEast);
+    map.fitBounds(originalBounds);
 });
 
 // filter through greenways list when typing in search box
