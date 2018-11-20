@@ -1,0 +1,402 @@
+
+
+/* ==========================================================================
+   Styles for personal website - BradleyAndrick
+   ========================================================================== */
+
+
+/*Style below here are for the whole page and the landing screen*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+
+a {
+  color: #555555;
+  text-decoration: none;
+}
+
+a:hover { 
+    color: #555555; 
+    text-decoration: none;
+}
+
+a:visited { 
+    color: #555555; 
+    text-decoration: none;
+}
+
+a:active{
+    color: #555555; 
+    text-decoration: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#jumbos{
+    color: #555555;
+}
+
+.jumbotron p{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+}
+
+#backLandingImage{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width: 100%;
+    opacity: .3;
+    z-index: 1;
+}
+
+#startScreenArea{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+#myButtons{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+}
+.myNavButtons{
+    height: 90px;
+    width: 180px;
+    font-weight: 1000;
+    font-size: 30px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #555555; 
+    border: 2px solid #555555;
+}
+
+.myNavButtons:hover{
+    color: #000; 
+    border: 2px solid #e86850;
+}
+
+#motoText{
+    position:absolute;
+    left: 570px;
+    top: 9px;
+    font-size: 22px;
+    z-index: 2;
+}
+
+#descParent2{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;     
+    justify-content:center;
+}
+
+#nameBradley{
+    font-size:85px;
+    bottom: 15px;
+    left: 30px;
+    color: #555555; 
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#descriptionBradley{
+    font-size:35px;
+    color: #555555; 
+    text-align: center;
+}
+
+#descriptionBradley:span{
+    color:red;
+}
+
+#downArrow{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+#scrollText{
+    position: absolute;
+    bottom: 50px;
+    left: 2px;
+    font-size: 25px;
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+#IconLink{
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    z-index: 2;
+    opacity: .4;
+}
+
+#IconGit{
+    position: absolute;
+    bottom: 10px;
+    right: 55px;
+    z-index: 2;
+    opacity: .4;
+}
+
+#IconTwit{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    opacity: .4;
+}
+
+#IconLink:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+#IconGit:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+#IconTwit:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Below is the style for the about section*/
+
+#aboutContainer{
+    padding-top: 50px;
+}
+
+#BradleyImageHolder{
+    text-align: center;
+    padding: 15px;
+}
+
+#BradleyImg{
+    height:100%;
+    width:100%;
+    max-width: 500px;
+    border-radius: 100%;
+    border-color: #555555;
+    border-width: 2px;
+    border-style: solid;
+    opacity: .8;
+}
+
+#photoText{
+ font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#elevatorTag1{
+    font-weight: 600;
+    font-size: 30px;
+    color: #e86850;
+}
+
+#elevatorTag2{
+    font-weight: 600;
+    font-size: 18px;
+    color: #555;
+}
+
+#elevatorTag3{
+    font-weight: 600;
+    font-size: 18px;
+    color: #555;
+}
+
+#elevatorTag4{
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.elevatorTag3 p{
+    margin: 0px;
+}
+
+.aboutWWH{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#elevatorTag4Head{
+    padding-top: 20px;
+}
+
+/* Below is the style for the Portfolio section*/
+
+.portImage{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 2px solid #555;
+    opacity: .7;
+}
+
+.portImage:hover{
+    border: 2px solid #555;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.portImg{
+    height:100%;
+    width:100%;
+    border-color: #555555;
+    border-width: 2px;
+    border-style: solid;
+    opacity: .8;
+}
+
+.portDesc{
+    font-weight: bold;
+}
+
+/* Below is the style for the Resume section*/
+
+#downloadResumeHolder{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#resumeContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.resumeImage{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #555;
+    opacity: .9;
+}
+
+.resumeImage:hover{
+    border: 2px solid #e86850;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#downloadText{
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.resumeText{
+    font-weight: bold;
+}
+
+/*Footer styles here*/
+
+footer{
+    text-align: center;
+    background-color: #eee;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer p{
+    padding: 20px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+/* Below is the media tags to control screen width changes*/
+
+@media only screen and (max-width: 800px) {
+    #nameBradley{
+        font-size:65px;
+    }
+    #descriptionBradley{
+        font-size:25px;
+    }
+    #motoText{
+        position:absolute;
+        left: 480px;
+        top: 10px;
+        font-size: 18px;
+    }
+    .myNavButtons{
+        height: 80px;
+        width: 150px;
+        font-weight: 1000;
+        font-size: 20px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {    
+    #motoText{
+        display: none;
+    }
+    .myNavButtons{
+        height: 50px;
+        width: 100px;
+        font-weight: 1000;
+        font-size: 20px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 330px) {    
+    .myNavButtons{
+        height: 40px;
+        width: 80px;
+        font-weight: 1000;
+        font-size: 15px;
+        padding: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

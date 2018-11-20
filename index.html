@@ -1,15 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Test</title>
-		<!--[if IE<9]>
-			<link rel="stylesheet" href="css/style.ie.css">
-		<![endif]-->
-	</head>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BradleyAndrick&nbsp;|&nbsp;GeoDev</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-	<body>
-		This webpage is currently under construction! It will be a personal landing page soon!
-	</body>
+    <!-- Note - this page has both inline style and css as practice and future reference of the variation in the methods. -->
+        
+    <!-- Main load screen -->
+        
+        <div id="startScreenArea">
+            <div id="myButtons">
+                <button  class="myNavButtons" id="aboutBtn">About</button>
+                <button  class="myNavButtons" id="portfolioBtn">Portfolio</button>              
+                <button  class="myNavButtons" id="resumeBtn">Resume</button>
+            </div>
+            <div id="motoText">Map<br>Design<br>Develop</div>
+            <div id="descParent2">
+                <div>
+                    <div id="nameBradley">Bradley A. Andrick</div>
+                    <hr style="border-width: 1px; border-color: #c1c1c1">
+                    <div id="descriptionBradley"><span style="font-weight: bold;">Geographer</span> Turned <span style="font-weight: bold; color: #e86850;">Software Developer.</span></div>
+                </div> 
+            </div>
+            <div id="scrollText">Scroll</div>
+            <div id="downArrow"><img src="img/Arrow.png" alt="Scroll Down" height="25"></div> 
+            <div id="IconLink">
+                <a href="https://www.linkedin.com/in/bradleyandrick" target="_blank"><img src="img/linkedInHex.png" alt="Social Icons" height="50"></a>
+            </div>
+            <div id="IconGit">
+                <a href="https://github.com/uwAndrick" target="_blank"><img src="img/githubHex.png" alt="Social Icons" height="50"></a>
+            </div>
+            <div id="IconTwit">
+                <a href="https://twitter.com/geo_andrick" target="_blank"><img src="img/twitterHex.png" alt="Social Icons" height="50"></a>
+            </div>    
+        </div>
+        <img src="img/Bradley+Olivia-154.jpg" id="backLandingImage" alt="BackImageMtns"> 
+
+    <!-- About section -->
+        
+        <div id="aboutContainer" class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div>   
+                        <div id="aboutWWH1" class="aboutWWH">Who?</div>
+                        <span id="elevatorTag1"><p>Bradley Andrick</p></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>   
+                        <div id="aboutWWH2" class="aboutWWH">What?</div> 
+                        <span id="elevatorTag2"><p>Software Development, Geospatial Analysis, Cartography, UI/UX Design, GIS Systems Project Planning and Management</p></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>   
+                        <div id="aboutWWH3" class="aboutWWH">How?</div>
+                        <span id="elevatorTag3">
+                                <span class="elevatorTag3"><p>BS in Geographic Science, JMU</p></span>
+                                <span class="elevatorTag3"><p>MS in GIS and Cartography, UW-Madison </p></span>
+                                <span class="elevatorTag3"><p>Passion, Drive and 5 + yrs of Experiance</p></span>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+            <div>
+                <div>   
+                  <div  id="elevatorTag4Head" class="aboutWWH">Anything Else?</div>  
+                  <span id="elevatorTag4"><p>I'm a total map nerd! But when I'm not doing something tech or map related you can usually find me building something in my amature woodshop, fixing up our 90 year old house, going to some event or brewery here in Asheville or hiking in the surrounding mountains with my amazing, beautiful and all around stunning wife Olivia and our slightly less stunning but still adorable four legged fur-baby, rescue pup Luna.</p></span>
+                </div>
+            </div>
+            <div class="col-md-112" id="BradleyImageHolder">
+              <img src="img/BradleyImage.jpg" alt="Bradley Image" id="BradleyImg">
+                <div id="photoText">My wife Olivia and I near our home in Asheville, NC.</div>
+            </div>
+            <hr>
+        </div>   
+        
+    <!-- Portfolio Section -->
+        
+        <div id="PortfolioDiv" class="jumbotron jumbos">
+          <div class="container">
+            <h1><b>Porfolio:</b></h1>
+            <p >A collection of work from past projects. Click each to view.</p>
+          </div>
+        </div>
+
+        <!--Images should be 1000px W x 800px H for thumbs-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Iceland Bike Map</h2>
+                    <div class="portImage"><a href="docs/content/BradleyAndrick_IcelandBikeMap.pdf" target="_blank"><img src="docs/preview/ice_preview.png" alt="Bike Image" class="portImg"></a></div>
+                    <p class="portDesc">A map of a 21 day bike tour of Iceland. Project was to highlight shaded relief and temporal flow.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>EVs Infographic</h2>
+                    <div class="portImage"><a href="docs/content/BradleyAndrick_InfoGraphic_EVs.pdf" target="_blank"><img src="docs/preview/info_elec_preview.png" alt="EV Image" class="portImg"></a></div>
+                    <p class="portDesc">Longform Infographic project highlighting the importance of why people should switch to electric vehicles.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>DMBS Comparison</h2>
+                    <div class="portImage"><a href="docs/content/BradleyAndrick_DBMS.pdf" target="_blank"><img src="docs/preview/dbPaper_preview.png" alt="DB Image" class="portImg"></a></div>
+                    <p class="portDesc">Report on the comparison of RDBMS efficiencies in query times with spatial data. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Asheville Greenway Map</h2>
+                    <div class="portImage"><a href="https://uwandrick.github.io/projects/ashevillegreenways/" target="_blank"><img src="docs/preview/bikeMap_preview.png" alt="Bike Image" class="portImg"></a></div>
+                    <p class="portDesc">Web map exploration tool showing greenways in Asheville, NC.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Turf Survey</h2>
+                    <div class="portImage"><a href="docs/content/BradleyAndrick_TurfSurvey.pdf" target="_blank"><img src="docs/preview/turf_preview.png" alt="Turf Image" class="portImg"></a></div>
+                    <p class="portDesc">Report showing data collection, analysis, and results of turf field sinkage.</p>
+                </div>
+                 <div class="col-md-4">
+                    <h2>Baby James Map</h2>
+                    <div class="portImage"><a href="https://uwandrick.github.io/projects/babyjames/" target="_blank"><img src="docs/preview/babyJames_preview.png" alt="James Image" class="portImg"></a></div>
+                    <p class="portDesc">Web map tool that highlights the prevalence of baby names through time. </p>
+               </div>
+            </div>
+            <hr>
+        </div>   
+        
+    <!-- Resume Section -->
+        
+        <div id="ResumeDiv" class="jumbotron jumbos">
+          <div class="container">
+            <h1><b>Resume:</b></h1>
+          </div>
+        </div>
+        <div class="container"> 
+            <div id="downloadResumeHolder"> 
+                <div id="resumeContainer">  
+                    <div class="resumeImage"><a href="docs/content/BradleyAndrick_Resume.pdf" target="_blank"><div id="downloadText">View Resume PDF</div></a></div>
+                </div>  
+            </div>
+            <h2 style="padding-bottom:20px;">The Basics</h2>
+            <div class="row">
+                <div  class="col-md-6">
+                    <div class="resumeText">
+                        <h4 style="font-weight:bold;"><u>Education:</u></h4>
+                        <p>MS GIS and Cartography '19, University of Wisconsin-Madison <br> GIS (Software) Development Option </p>
+                        <p>BS in Geographic Science '14, James Madison University <br> Concentration in Environmental Conservation, Sustainability and Development<br>Minor in Envrionmental Science</p>
+                    </div>
+                </div>
+                <div  class="col-md-6">
+                    <div class="resumeText">
+                        <h4 style="font-weight:bold;"><u>Experience:</u></h4>
+                        <p> Technical Solutions Administrator/Programmer, Arbormetrics Solutions<span style="float:right;">2016 - present</span></p>
+                        <p> GIS Coordinator, JMU Facilities Engineering Department<span style="float:right;">2015 - 2016</span></p>
+                        <p> Geospatial Developer, JMU (Virginia Foundation for the Humanities Grant)<span style="float:right;">2016</span></p>
+                        <p> GIS Technician, JMU Facilities Engineering Department<span style="float:right;">2014 - 2015</span></p>
+                        <p> Engineering Intern, Shentel (Outside Plant Engineering)<span style="float:right;">2013 - 2014</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-12">
+                    <div>
+                      <h4 style="font-weight:bold;"><u>Skills:</u></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-12">
+                    <div class="resumeText">
+                        <p><span style="font-size:16px;">People Skills: </span></p><p>Practiced Public Speaker, Technical Communication to Non-technical users, Training and 'How-to' Document Authoring, Employee and Intern Managment, Project Planning (Scope of Work Development), Co-worker Empathy and Respect, Real-World Integration, UI/UX Design with the User and Simplicity at the Focus of Development and Usabilty</p>
+                        <p><span style="font-size:16px;">Software Skills: </span></p><p>ArcGIS Suite Expert (ArcMap, ArcCatalog, ArcGIS Online, Model Builder, ArcGIS Pro, ArcGIS for Server), Adobe Illustrator and Photoshop, FME Universal Translator, AutoCAD - Civil 3D, Trimble Access/TerraSync, Trimble Business Center/Pathfinder Office, Mapcom Systems M4, Google Earth/Maps Engine, Boundless and QGIS, Mapbox Studio and Tile Mill, CARTO, GitHub, Survey Grade Trimble GPS Units (Juno, GeoXT, GeoExplorer 5, TSC2, TSC3, R8, R10), Geodatabase Management, Enterprise GIS Design, ArcGIS UI Customization, MS SQL Server, Windows Server 2008/2012/2014 R2, PostGRES/PostGIS, MySQL, Brackets IDE, Visual Studio Pro, SmartSheet Administration  </p>
+                        <p><span style="font-size:16px;">Dev Skills: </span></p><p>C# (.NET), Java, Python, HTML, CSS, JavaScript, PHP, SQL, VB, XAML and Xamarin (Android)</p><p>Web, PC, and Android Development using: Leaflet.js, GoogleMaps API, OpenLayers API, Esri Javascript API, jQuery, Bootstrap, D3.js, GDAL/OGR, ArcPy, CartoDB.js, DevExpress, ASP.NET, Xamarin Android, Android Studio, .NET (MVC) WebForms and WPF</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>   
+        
+    <!--Footer Section-->
+        
+        <footer>
+            <p>Website design and build by <span style="color:#e86850;">BradleyAndrick</span> &copy; 2018</p>
+        </footer>
+        
+    <!--JS libraries and script links-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
