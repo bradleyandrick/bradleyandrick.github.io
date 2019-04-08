@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Asheville River Park</title>
+
+        <!--   add icon for favicon     -->
+        <link rel="shortcut icon" type="image/png" href="img/riverIcon.png"/>
+        
+        
+		<!--external stylesheet links here-->
+        
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+        
+        <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        
+        <!-- Local stylesheets-->
+        <link href="css/checkBox.css" rel="stylesheet">
+        <link href="css/radioButtons.css" rel="stylesheet">
+        <link href="css/snackBar.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+	</head>
+
+	<body>
+		
+        <div id="AllContent">
+            
+        <!-- content for page header -->
+        <div id="TopBar">
+            <div id="PageHead"><img src="img/river.svg" class="riverSVG" alt="riverSymbol"height="87px"width="100px" /><p id="headText">Asheville River Park</p><img src="img/river.svg" class="riverSVG" alt="riverSymbol"height="87px"width="100px" /></div>
+
+            <div class="tablink MapTab" onclick="openPage('Home', this, '#4077A5')" id="defaultOpen">Map</div>
+            <div class="tablink ReportTab" onclick="openPage('Report', this, '#4077A5')" >Report Issue</div>
+        </div>
+        <!-- content for page body -->
+        <div id="bottomContent">
+            <div id="Home" class="tabcontent">
+                <div id="goHomeButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M30 15.957V32H20V20h-8v12H2V16H0l6-6V0h6v4l4-4 16 15.957h-2z"/></svg></div> 
+                <div id="getLocationButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M16.047.447c-8.615 0-15.6 6.983-15.6 15.6s6.984 15.6 15.6 15.6c8.617 0 15.6-6.983 15.6-15.6s-6.982-15.6-15.6-15.6zM18 29.079v-5.032h-3.953v5.032C8.371 28.21 3.883 23.722 3.016 18.047L8 18v-3.953H3.016C3.883 8.371 8.371 3.884 14.047 3.015V8H18V3.015c5.676.869 10.209 5.356 11.078 11.032h-5.031L24 18h5.078C28.209 23.676 23.676 28.21 18 29.079z"/></svg></div>
+                <div id="openLayersButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-blue"><path d="M32.047 9.047l-16 9-16-9 16-9zm-16 13.015L1.922 14.117.047 15.172l16 9 16-9-1.875-1.055zm0 5.93L1.922 20.047.047 21.102l16 9 16-9-1.875-1.055z"/></svg></div> 
+                <div id="layerListHolder">
+                    <div id="closeLayersButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M21.598 8H24v2.402l-5.601 5.6 5.601 5.6V24h-2.402l-5.599-5.6-5.601 5.6H8v-2.398l5.599-5.6L8 10.402V8h2.398l5.601 5.6L21.598 8zM31.6 16c0 8.615-6.983 15.6-15.6 15.6S.4 24.616.4 16C.4 7.385 7.383.4 16 .4S31.6 7.384 31.6 16zm-2.4 0c0-7.279-5.922-13.199-13.2-13.199S2.8 8.721 2.8 16 8.722 29.199 16 29.199 29.2 23.279 29.2 16z"/></svg></div>
+                    <div id="LayersTitle">Layer Toggle</div>
+                    <div id="LayerList">
+                        <label class="container">Recreation Info
+                          <input type="checkbox" id="RecInfoBox" data-layer="RecInfoBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Picnic Areas
+                          <input type="checkbox" id="PicnicAreaBox" data-layer="PicnicAreaBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Greenways
+                          <input type="checkbox" id="GreenwayBox" data-layer="GreenwayBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Parking Lots
+                          <input type="checkbox" id="ParkingLotBox" data-layer="ParkingLotBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Amenities (Restrooms, etc.)
+                          <input type="checkbox" id="AmenitiesBox" data-layer="AmenitiesBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Park Shadow
+                          <input type="checkbox" id="ParkShadowBox" data-layer="ParkShadowBox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Reported Issues
+                          <input type="checkbox" id="ReportedBox" data-layer="ReportedBox">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="legendHolder">
+                    <div id="openLegendButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M16.047.447c-8.615 0-15.6 6.982-15.6 15.6 0 8.615 6.984 15.6 15.6 15.6 8.617 0 15.6-6.984 15.6-15.6 0-8.617-6.982-15.6-15.6-15.6zm0 28.799c-7.279 0-13.199-5.92-13.199-13.199s5.92-13.2 13.199-13.2 13.199 5.921 13.199 13.2-5.92 13.199-13.199 13.199zm7.943-8.199l-7.953-8-8 8v-5l8-8 7.953 8v5z"/></svg></div>
+                    <div id="closeLegendButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M16.047.447c-8.615 0-15.6 6.982-15.6 15.6 0 8.615 6.984 15.6 15.6 15.6 8.617 0 15.6-6.984 15.6-15.6 0-8.617-6.982-15.6-15.6-15.6zm0 28.799c-7.279 0-13.199-5.92-13.199-13.199s5.92-13.2 13.199-13.2 13.199 5.921 13.199 13.2-5.92 13.199-13.199 13.199zm-8-18.199l8 8 8-8v5l-8 8-8-8z"/></svg></div>
+                    <div id="legendTitle">Legend</div>
+                    <div id="legendList">
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/recreation.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Recreation Info</div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/picnic.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Picnic Areas</div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/parking.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Parking Lots</div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/amenities.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Amenities</div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/issue.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Reported Issues</div>
+                        </div>
+                        <div class="legendItem">
+                          <div><u>Greenways:</u></div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/proposedGreenway.svg" alt="riverSymbol"height="30px"width="30px" /></span><div class="legendLayerName">Proposed</div>
+                        </div>
+                        <div class="legendItem">
+                          <span><img src="img/mapIconsSVG/completedGreenway.svg" alt="riverSymbol"height="5px"width="30px" /></span><div class="legendLayerName">Completed</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="map"></div>
+            </div>
+
+            <div id="Report" class="tabcontent">
+              <div id="reportDiv">
+                <div id="formDiv">
+                    <div class="inputName" id="inputFormTitle">Fill Out Form to Report Issue:</div>
+                    <div id="RequiredInfo"><span class="requiredRed" id="requiredRedTitle">*</span>&nbsp;= required field</div>
+                    <div class="inputName">Name:</div> 
+                    <input class="inputText" type="text" id="nameValue" placeholder="Enter your name...">
+                    <div class="inputName">Date observed: <span class="requiredRed">*</span></div>  
+                    <input class="inputText" type="date" id="dateValue">
+                    <div class="inputName">Issue details: <span class="requiredRed">*</span></div> 
+                    <textarea class="inputText" type="text" id="issueValue" maxlength="140" placeholder="140 characters max"></textarea>
+                    <div class="inputName">Do you want to be contacted?</div>
+                    <div id="radioButtons">
+                        <label class="containerRadio">No
+                          <input type="radio" checked="checked" name="radio" data-layer="noRadioBox">
+                          <span class="checkmarkRadio"></span>
+                        </label>
+                        <label class="containerRadio" id="secondRadio">Yes
+                          <input type="radio" name="radio" data-layer="yesRadioBox">
+                          <span class="checkmarkRadio"></span>
+                        </label>
+                    </div>
+                    <div id="contactDiv">
+                        <div class="inputName">Phone:</div> 
+                        <input class="inputText inputRadio" type="tel" placeholder="(555) 555-5555" maxlength="14" id="phoneValue" >
+                        <div class="inputName">Email:</div> 
+                        <input class="inputText inputRadio" type="email" id="emailValue" placeholder="Enter your email address...">
+                    </div>
+                    <div class="inputName" id="getInputGPS">Center map to set location: <span class="requiredRed">*</span></div>
+                    <div id="reportMap">
+                        <div id="formMap">
+                            <div id="getLocationButton2"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M16.047.447c-8.615 0-15.6 6.983-15.6 15.6s6.984 15.6 15.6 15.6c8.617 0 15.6-6.983 15.6-15.6s-6.982-15.6-15.6-15.6zM18 29.079v-5.032h-3.953v5.032C8.371 28.21 3.883 23.722 3.016 18.047L8 18v-3.953H3.016C3.883 8.371 8.371 3.884 14.047 3.015V8H18V3.015c5.676.869 10.209 5.356 11.078 11.032h-5.031L24 18h5.078C28.209 23.676 23.676 28.21 18 29.079z"/></svg></div>
+                            <div id="targetDiv"><img src="img/target2.svg" class="tragetSVG" alt="targetSymbol"height="87px"width="100px" /></div>
+                        </div>
+                    </div>
+                    <div id="sumbitForm">Submit Form</div>
+                </div>
+              </div> 
+                <div class="snackbar" id="snackbar1">Form Submitted</div>
+                <div class="snackbar" id="snackbar2">Error: Need Required Fields *</div>
+            </div>
+        </div> 
+      </div>
+        
+        
+    <!--external script links here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.2/carto.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+        
+    <!--local script links here-->
+    <script type="text/javascript" src="js/main.js"></script>
+        
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "picnicAreas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "details": "pavillion" }, "geometry": { "type": "Point", "coordinates": [ -82.577220974999989, 35.565800753000076 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "details": "tables" }, "geometry": { "type": "Point", "coordinates": [ -82.575560017999976, 35.565491691000034 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "details": "gazebo" }, "geometry": { "type": "Point", "coordinates": [ -82.574531966999984, 35.566023121000057 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "details": "shelter" }, "geometry": { "type": "Point", "coordinates": [ -82.564177, 35.569859482000027 ] } }
+]
+}

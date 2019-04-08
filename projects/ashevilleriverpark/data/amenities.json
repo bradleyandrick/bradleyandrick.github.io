@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "amenities",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "type": "restrooms" }, "geometry": { "type": "Point", "coordinates": [ -82.581398727999954, 35.566551083000036 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "type": "water fountain" }, "geometry": { "type": "Point", "coordinates": [ -82.582050097999968, 35.566617787000041 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "type": "restrooms" }, "geometry": { "type": "Point", "coordinates": [ -82.564422420999961, 35.56954203500004 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "type": "water fountain" }, "geometry": { "type": "Point", "coordinates": [ -82.573933729999965, 35.566379612000048 ] } }
+]
+}

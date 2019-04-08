@@ -1,0 +1,496 @@
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;;
+  overflow: hidden;
+  user-select: none;
+}
+
+#PageHead{
+  background-color: #fff;
+  height: 75px;
+  padding: 10px;
+  margin:0px;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  color: #4077A5;
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: #004987;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+  text-align: center;
+  height: 50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablink:hover {
+  background-color: #4077a5; 
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 0px;
+  height: 100%;
+  z-index: 1;
+}
+
+#Home {
+    background-color: #fff;
+}
+#Report {
+    background-color: #fff;
+}
+
+#AllContent{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#TopBar{
+    flex: 0 1 auto;
+}
+
+#bottomContent{
+    flex: 1 1 auto;
+}
+
+#map { 
+    height: 100%; 
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+}
+
+#reportDiv{
+    height: calc(100vh - 125px);
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 20px;
+    margin: 0px;
+    z-index: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+#testText{
+ padding: 0px;
+    margin: 0px;
+    color: #000;
+}
+
+/*Map buttons and styles below*/
+
+.svg-icon {
+  fill: #fff;
+  opacity: .9;
+}
+
+#goHomeButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 135px;
+    left: 10px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: .8;
+}
+
+#goHomeButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+#getLocationButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 195px;
+    left: 10px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: .8;
+}
+
+#getLocationButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+#openLayersButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 135px;
+    right: 10px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: .8;
+}
+
+#openLayersButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+#layerListHolder{
+    background-color: #fff;
+    width: 250px;
+    height: 390px;
+    position: absolute;
+    top: 135px;
+    right: 10px;
+    z-index: 3;
+    display: none;
+        opacity: .9;
+}
+
+#closeLayersButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#closeLayersButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+#LayersTitle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    background-color: #004987;
+    color: #fff;
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#LayerList{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    color: #004987;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#legendHolder{
+    background-color: #fff;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    opacity: .9;
+}
+
+#legendTitle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    z-index: 3;
+    font-size: 17px;
+    background-color: #004987;
+    color: #fff;
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#legendList{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    color: #004987;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.legendItem{
+    padding-bottom: 5px;
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 170px;
+}
+
+.legendLayerName{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+#openLegendButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#openLegendButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+#closeLegendButton{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#closeLegendButton:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+/*Report Issue Page style below*/
+
+#formDiv{
+    background: #fff;
+    padding: 20px;
+    outline-color: #4077A5;
+    outline-style: solid;
+    outline-width: 3px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.inputName{
+    color: #000;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.inputText{
+    width: 100%;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+#issueValue{
+    height: 100px;
+    resize: none;
+}
+
+#inputFormTitle{
+    background-color: #4077A5;
+    padding: 10px;
+    margin-bottom: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#radioButtons{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#containerRadio{
+    display: flex;
+    flex-direction: column;
+}
+
+#secondRadio{
+    margin-left: 20px;
+}
+
+#sumbitForm{
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    background: #4077A5;
+    color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#sumbitForm:hover {
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#reportMap{
+    height: 300px;
+    background-color: red;
+    width: 100%;
+}
+
+#formMap{
+    height: 100%;;
+    width: 100%;
+    background-color: #d3d3d3;
+    z-index: 2;
+}
+
+#targetDiv{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1 !important;
+    z-index: 5;
+}
+
+#getLocationButton2{
+    background-color: #4077A5;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#getLocationButton2:hover{
+    border-width: 2px;
+    border-color: #004987;
+    border-style: solid;
+}
+
+.leaflet-control-zoom{
+    opacity: .7;
+}
+
+#contactDiv{
+    display: none;
+}
+
+.requiredRed{
+    color: red;
+}
+
+#RequiredInfo{
+    color: #000;
+    font-size: 15px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#requiredRedTitle{
+    font-size: 20px;
+}
+
+/*Styles for smaller screens*/
+
+@media only screen and (max-width: 850px) {
+  #formDiv{  
+        outline-style: none;
+        outline-width: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .riverSVG {
+    display: none;
+  }
+  #PageHead{
+      justify-content: center;
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  #PageHead{
+      font-size: 28px;
+    }
+    .tablink{
+        font-size: 14px;
+    }
+}

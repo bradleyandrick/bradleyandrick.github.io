@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "parkingLots",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.579327569999975, 35.566097852000041 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.577948923999941, 35.566031085000077 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.582285510999952, 35.566211102000068 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.571405862999939, 35.566882356000065 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.569113186999971, 35.567350689000079 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6, "LotName": null, "NumSpace": null }, "geometry": { "type": "Point", "coordinates": [ -82.565021914999988, 35.569561429000032 ] } }
+]
+}
