@@ -60,7 +60,8 @@ body, html {
 	width: 100%;
     height: 100%;
 	position:absolute;
-    height: calc(100vh - 125px);
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc((var(--vh, 1vh) * 100) - 125px);
     width: 100%;
 }
 #Report {
@@ -87,7 +88,6 @@ body, html {
     padding: 0px;
     margin: 0px;
     z-index: 1;
-	height: calc(100vh - 125px);
 }
 
 #reportDiv{
