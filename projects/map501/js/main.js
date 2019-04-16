@@ -1,6 +1,6 @@
 
 // Scroll for index page footer image click
-$("#footImage").click(function(){
+$("#footImageHome").click(function(){
     
    window.scroll({
       top: 0,
