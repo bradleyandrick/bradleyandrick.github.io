@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Map501</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--external syles and fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+
+    <!--Local styles-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    
+    <!-- Main load screen -->
+    <div id="startScreenArea">
+        <div id="descParent2">
+            <div>
+                <div id="nameBradley"><img src="img/Logo1_map501.svg" id="mapTitleLogo" alt="downArrow"></div>
+                <hr style="border-width: 1px; border-color: #c1c1c1; opacity: 0;">
+                <div id="descriptionBradley"><span style="font-weight: bold;">A Knowledge Hub for Nonprofit Mapping</span></div>
+            </div> 
+        </div>
+        <div id="scrollText">Scroll<br><img src="img/ArrowRounded.png" id="downArrowImage" alt="downArrow"> </div>   
+    </div>
+    
+    <div id="backLandingImage">
+        <div id="map"></div> 
+    </div>
+    <div id="backOverlay"></div>
+    <div id="backPlaceHolder"></div>
+    
+    <div id="infoBreak">What is&nbsp;<span class="blueSpan">Map 501</span>?</div>
+    <div id="infoBreakText">In short: this is a starting place.</div>
+    <div id="infoBreakTextLongHolder"><div id="infoBreakTextLong"><span class="blueSpan">Map 501</span> is meant for people who are in the <span class="blueSpan">nonprofit sector</span> and have realized that they need help getting started adding mapping tools into their organization. <br><br> This site is not meant to teach you everything you need to know, but rather get you pointed in the right direction and give you a <span class="blueSpan">path to success</span>.</div></div>
+    
+    <!--    Div to separate parts-->
+    <div class="breakDiv" id="intoText">Click a tile below to start learning:</div>
+    
+    <div id="startPageContent">
+        <div class="container">
+          <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <a href="./quiz.html">
+                        <div class="centerText" id="quizText">Aren't sure where to start?<br>Take the Quiz!</div>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="row " >
+            <div class="col-md-4">
+                <div class="parentInfo">
+                    <a href="./tutorials.html">
+                        <div class="centerText align-middle">Tutorials</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <div class="parentInfo">
+                    <a href="./faq.html">
+                        <div class="centerText">Common FAQs</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parentInfo">
+                    <a href="./contact.html">
+                        <div class="centerText">Contact & Support</div>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col" >
+                <div class="parentInfo">
+                    <a href="./501collector.html">
+                        <div class="centerText" id="c3App">Need to simply collect data?<br>Try the Map501 web app!<br>Free to use, collect and export basic data.</div>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="breakDiv"></div>
+    
+    <div id="footDiv">
+        <img src="img/Logo1_map501.svg" id="footImage" alt="BackImageMtns">
+    </div>
+    
+    <!--  Add scripts here-->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Local Scripts-->
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

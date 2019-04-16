@@ -1,0 +1,906 @@
+/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+ /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+/*Style below here are for the whole page and the landing screen*/
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: #d3d3d3;
+    
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover { 
+    color: #000; 
+    text-decoration: none;
+}
+
+a:visited { 
+    color: #000; 
+    text-decoration: none;
+}
+
+a:active{
+    color: #000; 
+    text-decoration: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#jumbos{
+    color: #555555;
+}
+
+.jumbotron p{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+}
+
+#backLandingImage{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+
+}
+
+#backPlaceHolder{
+    height: 100vh;
+    width: 100%;
+    background-color: #555555;
+}
+
+#backOverlay{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: #d3d3d3;
+    opacity: .4;
+}
+
+#startScreenArea{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+}
+
+
+#descParent2{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;     
+    justify-content:center;
+    z-index: 3;
+    
+}
+
+#nameBradley{
+    font-size:85px;
+    bottom: 15px;
+    left: 30px;
+    color: #f1f1f1; 
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow:-2px -2px 0 #323232,  2px -2px 0 #323232, -2px 2px 0 #323232, 2px 2px 0 #323232;
+}
+
+#mapTitleLogo{
+    height: 150px;
+    z-index: 15;
+}
+
+#descriptionBradley{
+    font-size:35px;
+    color: #000; 
+    text-align: center;
+    text-shadow:-1.5px -1.5px 0 #f1f1f1,  1.5px -1.5px 0 #f1f1f1, -1.5px 1.5px 0 #f1f1f1, 1.5px 1.5px 0 #f1f1f1;
+}
+
+#descriptionBradley:span{
+    color:red;
+}
+
+#scrollText{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow:-1px -1px 0 #f1f1f1,  1px -1px 0 #f1f1f1, -1px 1px 0 #f1f1f1, 1px 1px 0 #f1f1f1;
+    color: #000;
+}
+#downArrowImage{
+    height: 20px;
+}
+
+
+/*Use this area to style map header*/
+
+#map{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*this is used for the body of start page area*/
+
+#infoBreak{
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px;
+    color: #444;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #f1f1f1;
+    text-decoration: underline;
+}
+
+#infoBreakText{
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #444;
+    padding-bottom: 50px;
+    background-color: #f1f1f1;
+}
+
+#infoBreakTextLongHolder{
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #444;
+    padding-bottom: 100px;
+    background-color: #f1f1f1;
+    padding-left:50px;
+    padding-right: 50px;
+}
+
+#infoBreakTextLong{
+    max-width: 800px;
+}
+
+.blueSpan{
+    color: #0071bc;
+}
+
+.justBlue{
+    color: #0071bc;
+}
+
+.greenSpan{
+    color: #66B032;
+     
+}
+
+.redSpan{
+    color: #ff5148;
+    /* font-style: italic; */
+}
+
+#intoText{
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    color: #444;
+    padding: 20px;
+}
+
+
+.breakDiv{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-color: #d3d3d3;
+}
+
+
+#startPageContent{
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d3d3d3;
+}
+
+.parentInfo{
+    margin: 10px;
+}
+
+.centerText{
+    text-align: center;
+    min-height: 250px;
+    background-color: #f1f1f1;
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.centerText:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: steelblue;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.quizText{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#c3App{
+     font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+/*this is used for the foot syle*/
+
+
+
+#footDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f1f1f1;
+}
+
+#footImage{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.sharedFootDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f1f1f1;
+    width: 100%;
+    bottom: 0px;
+}
+
+
+
+
+/*Style for the quiz page here: */
+
+#divName{
+    display: flex;
+    z-index: 5;
+    font-size: 40px;
+    color: #f1f1f1; 
+    padding-left: 20px;
+    margin: 0px;
+    border: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow:-2px -2px 0 #323232,  2px -2px 0 #323232, -2px 2px 0 #323232, 2px 2px 0 #323232;
+}
+
+.pageName{
+    display: flex;
+    font-size: 50px;
+    color: #000; 
+    padding-left: 20px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+
+.subPageDivHead{
+    position: relative;
+    display: flex;
+    height: 70px;
+    background-color: #f1f1f1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subHeadImage{
+    height: 50px;
+    display: flex;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.homePageHeadButton{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 70px;
+    width: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 5;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.homePageHeadButton:hover{
+    background-color: #e7e7e7;
+}
+
+
+.navPageHeadButton{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 70px;
+    width: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 5;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.navPageHeadButton:hover{
+    background-color: #e7e7e7;
+}
+
+
+.navPageHeadItemsList{
+    width: 150px;
+    background-color: #fafafa;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    display: none;
+}
+
+.navPageHeadItem{
+   font-size: 25px; 
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navPageHeadItemsList div:hover{
+    background-color: #e7e7e7;
+    cursor: pointer;
+} 
+
+.homeNavItem{
+    border-top-color: #555;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+.navPageHeadButton:hover .navPageHeadItemsList {
+  display: block;
+}
+    
+.breakBeforeFooter{
+    background-color: #d3d3d3;
+    height: 75px;
+    width: 100%;
+}
+
+.mainContent{
+    min-height: 700px;
+    background-color: #f1f1f1;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.quizText{
+    text-align: center;
+    min-height: 50px;
+    background-color: #d3d3d3;
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+
+}
+
+#submitQuiz{
+    height: 130px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#submitQuiz:hover{
+    border-style: solid;
+    border-width: 3px;
+    border-color: steelblue;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#quizAnswer{
+    text-align: center;
+    min-height: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#quizAnswer a:hover{
+    color: #0071bc;
+    font-weight: bold;
+}
+
+.FAQText{
+    text-align: center;
+    min-height: 50px;
+    background-color: #d3d3d3;
+    display:flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.FAQAnswer{
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.FAQAnswer a{
+    color: #0071bc;
+    font-weight: bold;
+}
+
+.ContactDiv{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.ContactDiv a{
+    color: #0071bc;
+    font-weight: bold;
+}
+
+.ContactDivCentered{
+    text-align: center;
+    display:flex;
+    flex: row;
+    justify-content:center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ContactDivCentered a{
+    color: #0071bc;
+    font-weight: bold;
+}
+
+.ContactDivCenteredNoMargin{
+    text-align: center;
+    display:flex;
+    flex: row;
+    justify-content:center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ContactDivCenteredNoMargin a{
+     color: #0071bc;
+    font-weight: bold;
+}
+
+.accordion {
+  background-color: #d3d3d3;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.4s;
+    padding: 18px;
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.HeadAboutContact{
+    font-weight: bold;
+}
+
+#bradPic{
+    height: 200px;
+    border-radius: 50px;
+}
+
+#aboutSpaceFoot{
+    height: 50px;
+}
+
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+ 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+/* Style adjustments for viewports that meet the condition */
+
+   .pageName{
+       font-size: 30px; 
+   }
+   .subHeadImage{
+       height: 40px;
+   }
+}
+
+@media only screen and (max-width: 340px) {
+/* Style adjustments for viewports that meet the condition */
+
+   .pageName{
+       font-size: 30px; 
+   }
+   .subHeadImage{
+       height: 30px;
+   }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@media only screen and (max-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+    #mapTitleLogo{
+        height: 100px;
+    }
+    #descriptionBradley{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    /* Style adjustments for viewports that meet the condition */
+    #mapTitleLogo{
+        height: 70px;
+    }
+    #descriptionBradley{
+        font-size: 25px;
+    }
+}
+
+ 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+

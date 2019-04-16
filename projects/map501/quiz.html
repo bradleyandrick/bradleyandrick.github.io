@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>MAP 501: Quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- External Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="css/radios.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <div class="subPageDivHead">
+        <a href="./"><img src="img/Logo1_map501.svg" class="subHeadImage" alt="Map Logo"></a>
+    </div>
+    <div class="navPageHeadButton">Nav
+        <div class="navPageHeadItemsList">
+            <a href="./"><div class="navPageHeadItem homeNavItem">Home</div></a>
+            <a href="./quiz.html"><div class="navPageHeadItem quizNavItem">Quiz</div></a>
+            <a href="./tutorials.html"><div class="navPageHeadItem tutorialNavItem">Tutorials</div></a>
+            <a href="./faq.html"><div class="navPageHeadItem faqNavItem">FAQs</div></a>
+            <a href="./contact.html"><div class="navPageHeadItem contactNavItem">Contact</div></a>
+            <a href="./501collector.html"><div class="navPageHeadItem collectNavItem">Collector</div></a>
+        </div>
+    </div>
+    <div class="pageName">Getting Started Quiz:</div>
+    <br><br>
+    <div class="mainContent">
+        <div class="container">
+          <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="quizText">How strong is your background with mapping and GIS?<br></div>
+                    <div id="quizOneRadios">
+                        <label class="containerR">I know nothing
+                          <input type="radio" name="radio1" value="1_1">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I made a few maps
+                          <input type="radio" name="radio1" value="1_2">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I took a course or two before
+                          <input type="radio" name="radio1" value="1_3">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I work with GIS daily
+                          <input type="radio" name="radio1" value="1_4">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="quizText">What is your budget?<br></div>
+                    <div id="quizOneRadios">
+                        <label class="containerR">Zero funding for maps
+                          <input type="radio" name="radio2" value="2_1">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">Some but limited
+                          <input type="radio" name="radio2" value="2_2">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I'm ready for a commitment
+                          <input type="radio" name="radio2" value="2_3">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">Budget is no option
+                          <input type="radio" name="radio2" value="2_4">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="quizText">Do you need a custom app?<br></div>
+                    <div id="quizOneRadios">
+                        <label class="containerR">I don't know what that means
+                          <input type="radio" name="radio3" value="3_1">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">No, out of the box is perfect
+                          <input type="radio" name="radio3" value="3_2">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">Some customization would be nice
+                          <input type="radio" name="radio3" value="3_3">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I want all things customized
+                          <input type="radio" name="radio3" value="3_4">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="quizText">Which best describes your goals?<br></div>
+                    <div id="quizOneRadios">
+                        <label class="containerR">I just want one map
+                          <input type="radio" name="radio4" value="4_1">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I need a web map(s) to show the public
+                          <input type="radio" name="radio4" value="4_2">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I need to collect data
+                          <input type="radio" name="radio4" value="4_3">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I need to do it all
+                          <input type="radio" name="radio4" value="4_4">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="quizText">What IT resources do you have?<br></div>
+                    <div id="quizOneRadios">
+                        <label class="containerR">I have nothing
+                          <input type="radio" name="radio5" value="5_1">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I have a basic computer
+                          <input type="radio" name="radio5" value="5_2">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I have a basic IT setup
+                          <input type="radio" name="radio5" value="5_3">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="containerR">I have full IT resouces 
+                          <input type="radio" name="radio5" value="5_4">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div class="quizText" id="submitQuiz">Submit<br></div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col" >
+                <div class="parentInfo">
+                    <div id="quizAnswer">Click submit button to get answer.</div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="breakBeforeFooter"></div>
+    <div class="sharedFootDiv">
+        <a href="./"><img src="img/Logo1_map501.svg" id="footImage" alt="BackImageMtns"></a>
+    </div>
+    
+    <!--  Add scripts here-->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--  Local Scripts-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
