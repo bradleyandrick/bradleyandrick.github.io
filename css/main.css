@@ -291,7 +291,23 @@ h2{
     width: 100%;
 }
 
+#downloadCVHolder{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
 #resumeContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#cvContainer{
     height: 100%;
     width: 100%;
     display: flex;
