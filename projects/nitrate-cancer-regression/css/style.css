@@ -1,0 +1,296 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: #484848;
+}
+
+#map { 
+    height: 100%; 
+    width: 100%;
+    z-index: 1;
+}
+
+#pageInfo{
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #DCDCDC;
+    z-index: 2;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 2px;
+    opacity: .9;
+}
+
+#TitleText{
+    font-size: 20px;
+    padding-left: 5px;
+    margin: 0px;
+    margin-top:10px;
+}
+
+.infoText{
+    padding-left: 5px;
+}
+
+#variablesHolder{
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 210px;
+    left: 5px;
+    background-color: #DCDCDC;
+    z-index: 2;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 2px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    opacity: .9;
+}
+
+#inputRow1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+#inputRow1, p{
+    padding-right: 10px;
+}
+#inputRow2{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: center; 
+    align-items: center;
+}
+#inputRow2, p{
+    padding-right: 10px;
+}
+
+#disInput{
+    width: 30px;
+    align-content: center;
+    padding: 5px;
+}
+
+#hexInput{
+    padding: 5px;
+    width: 40px;
+}
+
+#calculateButton{
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 265px;
+    left: 5px;
+    background-color: #DCDCDC;
+    z-index: 2;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 2px;
+    opacity: .9;
+}
+
+#CalText{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#calculateButton:hover{
+    cursor: pointer;
+    background-color: #d3d3d3;
+    z-index: 2;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 2px;
+    color: #282828;
+}
+
+#clearButton{
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 320px;
+    left: 5px;
+    background-color: #DCDCDC;
+    z-index: 2;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 2px;
+    opacity: .9;
+    display:none;
+}
+
+#clearButton:hover{
+    cursor: pointer;
+    background-color: #d3d3d3;
+    z-index: 2;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 2px;
+    color: #282828;
+}
+
+#ClearText{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#loadingHolder{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+
+#loadingHolder2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background-color: #d3d3d3;
+    border-radius: 30px;
+    opacity: .9;
+}
+#loadingImage{
+    position: absolute;
+    display: flex;
+}
+
+#customlayercontrol{
+    position: absolute;
+    z-index: 5;
+    right: 10px;
+    top: 10px;
+    padding: 20px;
+    background-color: #DCDCDC;
+    opacity: .9;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 2px;
+    font-size: 20px;
+    display: none;
+}
+
+#ChartContainer{
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    z-index: 5;
+    height: 200px;
+    width: 300px;
+    opacity: .9;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 2px;
+    display: none;
+}
+
+
+#legendHolderNitrate{
+    position: absolute;
+    top: 160px;
+    right: 10px;
+    z-index: 5;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: #484848;
+    font-size: 14px;
+    display: none;
+}
+
+#legendHolderCancerRate{
+    position: absolute;
+    top: 160px;
+    right: 10px;
+    z-index: 5;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: #484848;
+    font-size: 14px;
+    display: none;
+}
+
+#legendHolderRegression{
+    position: absolute;
+    top: 160px;
+    right: 10px;
+    z-index: 5;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: #484848;
+    font-size: 14px;
+    display: none;
+}
+
+
+.legend {
+    padding: 6px 8px;
+    font-size: 1em;
+    background-color: #DCDCDC;
+    opacity: .9;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 2px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: #484848;
+}
+
+.legend h3 {
+    color: #484848;
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+
+.legend span {
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.legend label {
+    font-size: 1.1em;
+}
+
+.legend label:after {
+    content: '';
+    display: block;
+    clear: both;
+}
