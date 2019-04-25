@@ -24,66 +24,68 @@
 	</head>
 
 	<body>
-        <div id="pageInfo">
-            <p id="TitleText"><u>Exploring Nitrate Levels and Cancer Rates</u></p>
-            <p class="infoText">This is a tool to explore the relationship between nitrate levels recorded in wells across Wisconsin and cancer rates that exisit in areas of the state.</p>
-            <p class="infoText">Change the values below and click "calculate" to return spatial data layers with the results.</p>  
-        </div>
-        <div id="variablesHolder">
-            <div id="inputRow1">
-                <p>Distance Decay (k):</p>
-                <input id="disInput" type="text" name="var1Value" value="2">
+        <div id="screenSmallText">Oops. <br><br>Looks like this app needs to be used on a larger screen!</div>
+        <div id="appWrapper">
+            <div id="pageInfo">
+                <p id="TitleText"><u>Exploring Nitrate Levels and Cancer Rates</u></p>
+                <p class="infoText">This is a tool to explore the relationship between nitrate levels recorded in wells across Wisconsin and cancer rates that exisit in areas of the state.</p>
+                <p class="infoText">Change the values below and click "calculate" to return spatial data layers with the results.</p>  
             </div>
-            <div id="inputRow2">
-                <p>Bin Size (mi):</p>
-                <input type="number" id="hexInput" name="quantity" value="10" min="1" max="25">
+            <div id="variablesHolder">
+                <div id="inputRow1">
+                    <p>Distance Decay (k):</p>
+                    <input id="disInput" type="text" name="var1Value" value="2">
+                </div>
+                <div id="inputRow2">
+                    <p>Bin Size (mi):</p>
+                    <input type="number" id="hexInput" name="quantity" value="10" min="1" max="25">
+                </div>
             </div>
-        </div>
-        
-         <div id="calculateButton">
-            <p id="CalText">CALCULATE</p>
-        </div>
-        
-        <div id="clearButton">
-            <p id="ClearText">CLEAR RESULTS</p>
-        </div>
-        
-        <div id="ChartContainer"></div>
-        
-        <div id="loadingHolder">
-            <div id="loadingHolder2">
-                <div id="loadingImage"><img src="./img/loading.gif" alt="Loading" height="140" width="140"></div>
-                <div id="loadingText">Loading</div>
+
+             <div id="calculateButton">
+                <p id="CalText">CALCULATE</p>
             </div>
+
+            <div id="clearButton">
+                <p id="ClearText">CLEAR RESULTS</p>
+            </div>
+
+            <div id="ChartContainer"></div>
+
+            <div id="loadingHolder">
+                <div id="loadingHolder2">
+                    <div id="loadingImage"><img src="./img/loading.gif" alt="Loading" height="140" width="140"></div>
+                    <div id="loadingText">Loading</div>
+                </div>
+            </div>
+
+            <div id="snackbar">Data Reset and Results Cleared</div>
+
+            <div id="customlayercontrol">
+
+                <label class="container">Regression Analysis Results
+                  <input type="radio" name="radio" id="regressionDataLayerID" checked="checked" data-layer="regressionDataLayer">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Nitrate Levels (Interpolated)
+                  <input type="radio" name="radio" id="nitrateDataLayerID" data-layer="nitrateDataLayer">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Cancer Rates (Interpolated)
+                  <input type="radio" name="radio" id="cancerDataLayerID" data-layer="cancerDataLayer">
+                  <span class="checkmark"></span>
+                </label>
+
+            </div>
+
+            <div id="legendHolderNitrate"></div>
+            <div id="legendHolderCancerRate"></div>
+            <div id="legendHolderRegression"></div>
+
+            <div id="map"></div>
         </div>
-        
-        <div id="snackbar">Data Reset and Results Cleared</div>
-        
-        <div id="customlayercontrol">
-            
-            <label class="container">Regression Analysis Results
-              <input type="radio" name="radio" id="regressionDataLayerID" checked="checked" data-layer="regressionDataLayer">
-              <span class="checkmark"></span>
-            </label>
-
-            <label class="container">Nitrate Levels (Interpolated)
-              <input type="radio" name="radio" id="nitrateDataLayerID" data-layer="nitrateDataLayer">
-              <span class="checkmark"></span>
-            </label>
-
-            <label class="container">Cancer Rates (Interpolated)
-              <input type="radio" name="radio" id="cancerDataLayerID" data-layer="cancerDataLayer">
-              <span class="checkmark"></span>
-            </label>
-
-        </div>
-        
-        <div id="legendHolderNitrate"></div>
-        <div id="legendHolderCancerRate"></div>
-        <div id="legendHolderRegression"></div>
-        
-        <div id="map"></div>
-
 		<!--script links here-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         

@@ -12,6 +12,8 @@ html, body{
     height: 100%; 
     width: 100%;
     z-index: 1;
+    margin: 0px;
+    padding: 0px;
 }
 
 #pageInfo{
@@ -293,4 +295,48 @@ html, body{
     content: '';
     display: block;
     clear: both;
+}
+
+
+#screenSmallText{
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: #d3d3d3;
+    display: none;
+    font-size: 18px;
+}
+
+#appWrapper{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        background-color: #d3d3d3;
+    }
+    #appWrapper{
+        display: none;
+    }
+    #screenSmallText{
+        display:flex;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    body {
+        background-color: #d3d3d3;
+    }
+    #appWrapper{
+        display: none;
+    }
+    #screenSmallText{
+        display:flex;
+    }
 }
