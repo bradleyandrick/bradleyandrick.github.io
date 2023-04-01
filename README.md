@@ -1,3 +1,3 @@
-# uwandrick.github.io
+# bradleyandrick.github.io
 
 This is a web repo for portfolio dev stuff.
